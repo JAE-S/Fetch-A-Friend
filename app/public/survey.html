@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>Friend Finder</title>
+
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+        <!-- Materialize Links -->
+        <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+        <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+        <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+   
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/materialize.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+
+    <body> 
+        <header> 
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #26a69a">
+                <div class="container">
+                    <a class="navbar-brand" href="survey.html">Friend Finder</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container">
+        <!-- User Details --> 
+            <section class="container_details" style="max-width: 960px; width: 100%; margin: 0 auto; display: block; margin-top: 20px; padding: 10px">
+                <h2>Survey</h2>
+                <hr> 
+                <h5>To get started please answer a few details below.</h5>
+
+                <form class = "col s12">
+                    <div class = "row">
+                    <!-- User First Name --> 
+                        <div class="input-field col s6">
+                            <i class ="material-icons prefix">account_circle</i>
+                            <input placeholder="First Name" value="" id="name"
+                            type="text" class="active validate" required />
+                            <span class="helper-text" data-error="Please enter your first name" data-success=""></span>   
+                            <!-- <label for="name">First Name</label> -->
+                        </div>
+                    <!-- User Last Name --> 
+                        <div class="input-field col s6">      
+                            <!-- <label for="password">Last Name</label> -->
+                            <input id="last_name" type="text" placeholder="Last Name"
+                            class="validate" required />    
+                            <span class="helper-text" data-error="Please enter your last name" data-success="">We'll never share your Last Name with anyone else.</span>      
+                        </div>
+                    </div>
+
+                    <div class = "row">
+                        <!-- <label>Profile Photo</label> -->
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>Browse</span>
+                                <input type="file" />
+                            </div>
+                            
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text"
+                                    placeholder="Please upload a profile photo" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <button id="start" style="width: 100%" class="btn">Start</button>
+            </section>
+
+            <section>
+                <h2>Welcome!</h2>
+                <hr> 
+                <h5>Please answer the questions below to find your match!</h5>
+               
+                <ul class = "collapsible popout" data-collapsible = "accordion">
+
+                <!-- Question: 1 -->
+                    <li>
+                        <section class = "collapsible-header">
+                            <i class = "material-icons">filter_drama</i>Question 1: 
+                        </section>
+                        <div class = "collapsible-body">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                <!-- Question: 2 -->
+                    <li>
+                        <section class = "collapsible-header">
+                            <i class = "material-icons">place</i>Question 2: 
+                        </section>
+                        <div class = "collapsible-body">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                <!-- Question: 3 -->
+                    <li>
+                        <div class = "collapsible-header">
+                            <i class = "material-icons">whatshot</i>Question 3: 
+                        </div>
+                        <div class = "collapsible-body">
+                                <div class="input-field col s12">
+                                    <select>
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                    </li>
+                <!-- Question: 4 -->
+                    <li>
+                        <div class = "collapsible-header">
+                            <i class = "material-icons">whatshot</i>Question 4: 
+                        </div>
+                        <div class = "collapsible-body">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                <!-- Question: 5 -->
+                    <li>
+                        <div class = "collapsible-header">
+                            <i class = "material-icons">whatshot</i>Question 5: 
+                        </div>
+                        <div class = "collapsible-body">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                        </div> 
+                    </li>
+                <!-- Question: 6 -->
+                    <li>
+                        <div class = "collapsible-header">
+                            <i class = "material-icons">whatshot</i>Question 6: 
+                        </div>
+                        <div class = "collapsible-body">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                <!-- Question: 7 -->
+                    <li>
+                        <div class = "collapsible-header">
+                            <i class = "material-icons">whatshot</i>Question 7: 
+                        </div>
+                        <div class = "collapsible-body">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                <!-- Question: 8 -->
+                    <li>
+                        <div class = "collapsible-header">
+                            <i class = "material-icons">whatshot</i>Question 8: 
+                        </div>
+                        <div class = "collapsible-body">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                <!-- Question: 9 -->
+                    <li>
+                        <div class = "collapsible-header">
+                            <i class = "material-icons">whatshot</i>Question 9: 
+                        </div>
+                        <div class = "collapsible-body">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                <!-- Question: 10 -->
+                    <li>
+                        <div class = "collapsible-header">
+                            <i class = "material-icons">whatshot</i>Question 10: 
+                        </div>
+                        <div class = "collapsible-body">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+        
+                </ul>
+            </section>
+        </main>
+
+        <!-- <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Friend Finder</h5>
+                      <p class="grey-text text-lighten-4">Connect with friends around the world</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                      <h5 class="white-text">Links</h5>
+                      <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">API Friends List</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">GitHub Repo</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                    © 2019 Copyright
+                </div>
+            </div>
+        </footer>  -->
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="assets/materialize js/materialize.min.js"></script>
+        <script type="text/javascript" src="../data/layout.js"></script>
+        <script type="text/javascript" src="../data/friends.js"></script>
+
+    </body>
+</html>

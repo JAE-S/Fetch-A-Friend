@@ -1,0 +1,28 @@
+{
+  "name": "Friend-Fiinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JAE-S/Friend-Fiinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JAE-S/Friend-Fiinder/issues"
+  },
+  "homepage": "https://github.com/JAE-S/Friend-Fiinder#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "express": "^4.17.1",
+    "joi": "^14.3.1",
+    "materialize": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}
