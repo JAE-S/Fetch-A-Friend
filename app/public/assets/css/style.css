@@ -1,5 +1,5 @@
 main {
-    height: 52vh;
+    height: 52vh!important;
 }
 header, footer {
     background-color: #26a69a!important;

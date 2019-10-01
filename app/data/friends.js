@@ -1,23 +1,79 @@
 // You should save your application's data inside of app/data/friends.js as an array of objects. Each of these objects should roughly follow the format below.
 
-// var friends = 
-// {
-//     "name":"Ahmed",
-//     "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-//     "scores":[
-//         5,
-//         1,
-//         4,
-//         4,
-//         5,
-//         1,
-//         2,
-//         5,
-//         4,
-//         1
-//       ]
-//   },
-  
+var friends = [
+{
+    "first_name":"Person 1",
+    "last_name":"Person 1-2",
+    "photo":"",
+    "scores":[
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1
+      ]
+  },
+  {
+    "first_name": "Person 2",
+    "last_name": "Person 2-2",
+    "photo":"",
+    "scores":[
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1
+      ]
+  },
+  {
+    "first_name": "Person 3",
+    "last_name": "Person 3-2",
+    "photo":"",
+    "scores":[
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1
+      ]
+  },
+  {
+    "first_name": "Person 4",
+    "last_name": "Person 4-2",
+    "photo":"",
+    "scores":[
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1
+      ]
+  },
+
+]
+
+module.exports = friends; 
+// console.log(friends);
 // Determine the user's most compatible friend using the following as a guide:
 
 
