@@ -60,8 +60,8 @@
                     <div class = "row">
                         <!-- <label>Profile Photo</label> -->
                         <div class="file-field input-field">
-                            <div class="btn">
-                                <span>Browse</span>
+                            <div class="btn"><i class="large material-icons">add_a_photo</i>
+                                
                                 <input type="file" />
                             </div>
                             
@@ -73,20 +73,20 @@
                     </div>
                 </form>
 
-                <button id="start" style="width: 100%" class="btn">Start</button>
+                <button id="start" class="center-align btn" style="width: 60%; display: block; margin: 0 auto">Start</button>
             </section>
 
             <section id="survey">
-                <h2>Welcome!</h2>
+                <h2 class="center-align">Welcome!</h2>
                 <hr> 
-                <h5>Please answer the questions below to find your match!</h5>
+                <h5 class="center-align" style="padding-bottom: 20px">Please answer the questions below to find your match!</h5>
                
                 <ul class = "collapsible popout" data-collapsible = "accordion">
 
                 <!-- Question: 1 -->
                     <li>
                         <section class = "collapsible-header">
-                            <i class = "material-icons">filter_drama</i>Question 1: 
+                            <i class = "material-icons">expand_more</i>Question 1: 
                         </section>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
@@ -102,7 +102,7 @@
                 <!-- Question: 2 -->
                     <li>
                         <section class = "collapsible-header">
-                            <i class = "material-icons">place</i>Question 2: 
+                            <i class = "material-icons">expand_more</i>Question 2: 
                         </section>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
@@ -118,7 +118,7 @@
                 <!-- Question: 3 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">whatshot</i>Question 3: 
+                            <i class = "material-icons">expand_more</i>Question 3: 
                         </div>
                         <div class = "collapsible-body">
                                 <div class="input-field col s12">
@@ -134,7 +134,7 @@
                 <!-- Question: 4 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">whatshot</i>Question 4: 
+                            <i class = "material-icons">expand_more</i>Question 4: 
                         </div>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
@@ -150,7 +150,7 @@
                 <!-- Question: 5 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">whatshot</i>Question 5: 
+                            <i class = "material-icons">expand_more</i>Question 5: 
                         </div>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
@@ -166,7 +166,7 @@
                 <!-- Question: 6 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">whatshot</i>Question 6: 
+                            <i class = "material-icons">expand_more</i>Question 6: 
                         </div>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
@@ -182,7 +182,7 @@
                 <!-- Question: 7 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">whatshot</i>Question 7: 
+                            <i class = "material-icons">expand_more</i>Question 7: 
                         </div>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
@@ -198,7 +198,7 @@
                 <!-- Question: 8 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">whatshot</i>Question 8: 
+                            <i class = "material-icons">expand_more</i>Question 8: 
                         </div>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
@@ -214,7 +214,7 @@
                 <!-- Question: 9 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">whatshot</i>Question 9: 
+                            <i class = "material-icons">expand_more</i>Question 9: 
                         </div>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
@@ -230,7 +230,7 @@
                 <!-- Question: 10 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">whatshot</i>Question 10: 
+                            <i class = "material-icons">expand_more</i>Question 10: 
                         </div>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
@@ -244,8 +244,40 @@
                         </div>
                     </li>
                 </ul>
-                <button id="find_my_match" style="width: 100%" class="btn">Find My Match</button>
+                <a id="find_my_match" href="#modal1" style="width: 94%; display: block; margin: 0 auto; margin-top: 4vh;  margin-bottom: 4vh" class="waves-effect waves-light btn modal-trigger ">Find My Match</a>
             </section>
+        
+             <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                <h4>You Matched With: </h4>
+                <hr>
+                <!-- <p></p> -->
+                <!-- <div class="progress" style="margin-top: 6vh">
+                    <div class="indeterminate"></div>
+                </div> -->
+                <div class="row center-align valign-wrapper" style="padding-top: 40px!important">
+                        <div class="col s5">
+                          <img src="http://via.placeholder.com/200x200" alt="" class="z-depth-3 left-align responsive-img"> 
+                        </div>
+                        <div class="col s2">
+                          <span class="black-text">
+                            <i class="material-icons center-align" style="font-size: 6em!important; color: #26a69a">done</i>
+                          </span>
+                        </div>
+                        <div class="col s5">
+                                <img src="http://via.placeholder.com/200x200" alt="" class="z-depth-3 right-align responsive-img"> 
+                        </div>
+                </div>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-content" style="border-top: 1px solid #26a69a; margin-left: 20px; margin-right: 20px">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+                </div>
+            </div>
+      
         </main>
 
         <footer class="page-footer">
@@ -282,13 +314,14 @@
             $("#survey").hide();
             $('#user_details').show();
 
+            
+            $('.modal').modal();
             $('select').formSelect();
             // $('input#name, input#last_name').characterCounter();
 
             $('#start').on("click", () => {
                 $('#user_details').hide();
                 $("#survey").show();
-               
             });
 
         });
