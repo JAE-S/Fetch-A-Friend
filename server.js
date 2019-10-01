@@ -16,7 +16,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 // Serves static content from the "public" directory into the application directory.
-app.use(express.static(path.join(__dirname, './app/public')));
+app.use(express.static('app/public'));
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));

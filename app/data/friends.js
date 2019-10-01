@@ -1,6 +1,4 @@
 // You should save your application's data inside of app/data/friends.js as an array of objects. Each of these objects should roughly follow the format below.
-
-
 var friends = [
 {
     "first_name":"Person 1",
@@ -69,7 +67,7 @@ var friends = [
         3,
         1
       ]
-  },
+  }, 
 
 ]
 
