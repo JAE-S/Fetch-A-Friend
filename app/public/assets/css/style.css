@@ -1,6 +1,26 @@
-main {
-    height: 52vh!important;
+body {
+   /* height: 52vh!important; */
+   height: 100vh;
 }
 header, footer {
     background-color: #26a69a!important;
 }
+
+#user_details {
+    max-width: 960px; 
+    width: 100%; 
+    margin: 0 auto; 
+    display: block; 
+    margin-top: 20px; 
+    padding: 10px
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }

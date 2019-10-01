@@ -1,5 +1,6 @@
 // You should save your application's data inside of app/data/friends.js as an array of objects. Each of these objects should roughly follow the format below.
 
+
 var friends = [
 {
     "first_name":"Person 1",
@@ -74,6 +75,8 @@ var friends = [
 
 module.exports = friends; 
 // console.log(friends);
+
+
 // Determine the user's most compatible friend using the following as a guide:
 
 

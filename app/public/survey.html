@@ -33,7 +33,7 @@
 
         <main class="container">
         <!-- User Details --> 
-            <section class="container_details" style="max-width: 960px; width: 100%; margin: 0 auto; display: block; margin-top: 20px; padding: 10px">
+            <section id="user_details">
                 <h2>Survey</h2>
                 <hr> 
                 <h5>To get started please answer a few details below.</h5>
@@ -76,7 +76,7 @@
                 <button id="start" style="width: 100%" class="btn">Start</button>
             </section>
 
-            <section>
+            <section id="survey">
                 <h2>Welcome!</h2>
                 <hr> 
                 <h5>Please answer the questions below to find your match!</h5>
@@ -243,12 +243,12 @@
                             </div>
                         </div>
                     </li>
-        
                 </ul>
+                <button id="find_my_match" style="width: 100%" class="btn">Find My Match</button>
             </section>
         </main>
 
-        <!-- <footer class="page-footer">
+        <footer class="page-footer">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
@@ -269,12 +269,30 @@
                     © 2019 Copyright
                 </div>
             </div>
-        </footer>  -->
+        </footer> 
 
         <!--Import jQuery before materialize.js-->
-        <script type="text/javascript" src="assets/materialize js/materialize.min.js"></script>
+        <script type="text/javascript" src="/assets/materialize js/materialize.min.js"></script>
+        <script type="text/javascript" src="./app/data/friends.js"></script>
         <script type="text/javascript" src="../data/layout.js"></script>
-        <script type="text/javascript" src="../data/friends.js"></script>
+
+        <script> 
+
+        $('document').ready(() => {
+            $("#survey").hide();
+            $('#user_details').show();
+
+            $('select').formSelect();
+            // $('input#name, input#last_name').characterCounter();
+
+            $('#start').on("click", () => {
+                $('#user_details').hide();
+                $("#survey").show();
+               
+            });
+
+        });
+        </script> 
 
     </body>
 </html>
