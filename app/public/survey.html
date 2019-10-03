@@ -23,10 +23,11 @@
     </head>
 
     <body> 
+        <!-- Header --> 
         <header> 
             <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #26a69a">
                 <div class="container">
-                    <a class="navbar-brand" href="survey.html">Friend Finder</a>
+                    <a class="navbar-brand" href="survey.html">FETCH A FRIEND</a>
                 </div>
             </nav>
         </header>
@@ -34,16 +35,17 @@
         <main class="container">
         <!-- User Details --> 
             <section id="user_details">
-                <h2>Survey</h2>
+                <h2>Pawfile</h2>
                 <hr> 
                 <h5>To get started please answer a few details below.</h5>
-
-                <form class = "col s12">
-                    <div class = "row">
+            
+            <!-- Input form --> 
+                <form method="POST" role="form" class="col s12">
+                    <div class="row">
                     <!-- User First Name --> 
                         <div class="input-field col s6">
-                            <i class ="material-icons prefix">account_circle</i>
-                            <input placeholder="First Name" value="" id="name"
+                            <i class="material-icons prefix">account_circle</i>
+                            <input placeholder="First Name" value="" id="first_name"
                             type="text" class="active validate" required />
                             <span class="helper-text" data-error="Please enter your first name" data-success=""></span>   
                             <!-- <label for="name">First Name</label> -->
@@ -56,15 +58,13 @@
                             <span class="helper-text" data-error="Please enter your last name" data-success="">We'll never share your Last Name with anyone else.</span>      
                         </div>
                     </div>
-
+                    <!-- Upload a photo --> 
                     <div class = "row">
                         <!-- <label>Profile Photo</label> -->
                         <div class="file-field input-field">
-                            <div class="btn"><i class="large material-icons">add_a_photo</i>
-                                
-                                <input type="file" />
+                            <div class="btn"><i class="large material-icons">add_a_photo</i> 
+                                <input id="photo" type="file" />
                             </div>
-                            
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text"
                                     placeholder="Please upload a profile photo" />
@@ -73,28 +73,28 @@
                     </div>
                 </form>
 
-                <button id="start" class="center-align btn" style="width: 60%; display: block; margin: 0 auto">Start</button>
+            <!-- Submit button --> 
+                <button id="start" class="center-align btn" style="width: 60%; display: block; margin: 0 auto">Get Sniffing</button>
             </section>
-
+            <!-- Survey --> 
             <section id="survey">
-                <h2 class="center-align">Welcome!</h2>
-                <hr> 
+                <a><img class="responsive-img" style="max-width: 400px; width: 100%; height: auto; margin: 0 auto; display: block; margin-top: 20px" src="assets/images/main_images/dog_main.jpg" alt="Boxer dog fetching a new furry companion!"></a>
                 <h5 class="center-align" style="padding-bottom: 20px">Please answer the questions below to find your match!</h5>
-               
+            <!-- Questions --> 
                 <ul class = "collapsible popout" data-collapsible = "accordion">
 
                 <!-- Question: 1 -->
                     <li>
                         <section class = "collapsible-header">
-                            <i class = "material-icons">expand_more</i>Question 1: 
+                            <i class = "material-icons">expand_more</i>What is your perfect Friday night? 
                         </section>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
-                                <select id="q_1">
+                                <select class="question" id="q_1">
                                     <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">Pick up game of fetch, then off to the pub with the humans.</option>
+                                    <option value="2">Anything goes… as long as toys are involved.</option>
+                                    <option value="3">Dogflix and chill.</option>
                                 </select>
                             </div>
                         </div>
@@ -102,15 +102,15 @@
                 <!-- Question: 2 -->
                     <li>
                         <section class = "collapsible-header">
-                            <i class = "material-icons">expand_more</i>Question 2: 
+                            <i class = "material-icons">expand_more</i>What is your favorite television show?
                         </section>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
-                                <select id="q_2">
+                                <select class="question" id="q_2">
                                     <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">Who needs tv when you have windows…</option>
+                                    <option value="2">Game of Bones.</option>
+                                    <option value="3">Chicago Fire Hydrant.</option>
                                 </select>
                             </div>
                         </div>
@@ -118,15 +118,15 @@
                 <!-- Question: 3 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">expand_more</i>Question 3: 
+                            <i class = "material-icons">expand_more</i>What is your favorite toy?
                         </div>
                         <div class = "collapsible-body">
                                 <div class="input-field col s12">
-                                    <select id="q_3">
+                                    <select class="question" id="q_3">
                                         <option value="" disabled selected>Choose your option</option>
-                                        <option value="1">Option 1</option>
-                                        <option value="2">Option 2</option>
-                                        <option value="3">Option 3</option>
+                                        <option value="1">Tennis Balls.</option>
+                                        <option value="2">Slippers.</option>
+                                        <option value="3">I don’t have time for toys.</option>
                                     </select>
                                 </div>
                             </div>
@@ -134,15 +134,15 @@
                 <!-- Question: 4 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">expand_more</i>Question 4: 
+                            <i class = "material-icons">expand_more</i>What’s for dinner? 
                         </div>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
-                                <select id="q_4">
+                                <select class="question" id="q_4">
                                     <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">I only eat raw.</option>
+                                    <option value="2">Everything that fits in my mouth.</option>
+                                    <option value="3">Anything that falls or lands in my reach.</option>
                                 </select>
                             </div>
                         </div>
@@ -150,15 +150,15 @@
                 <!-- Question: 5 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">expand_more</i>Question 5: 
+                            <i class = "material-icons">expand_more</i>Who is your favorite actor?
                         </div>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
-                                <select id="q_5">
+                                <select class="question" id="q_5">
                                     <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">Lady(Lady and the Tramp).</option>
+                                    <option value="2">Petey(The Little Rascals).</option>
+                                    <option value="3">Baxter(Anchorman: The Legend of Ron Burgundy).</option>
                                 </select>
                             </div>
                         </div> 
@@ -166,15 +166,15 @@
                 <!-- Question: 6 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">expand_more</i>Question 6: 
+                            <i class = "material-icons">expand_more</i>Bark or bite?
                         </div>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
-                                <select id="q_6">
+                                <select class="question" id="q_6">
                                     <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">Hide.</option>
+                                    <option value="2">Bark.</option>
+                                    <option value="3">Bite.</option>
                                 </select>
                             </div>
                         </div>
@@ -182,15 +182,15 @@
                 <!-- Question: 7 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">expand_more</i>Question 7: 
+                            <i class = "material-icons">expand_more</i>Busted! How do you react? 
                         </div>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
-                                <select id="q_7">
+                                <select class="question" id="q_7">
                                     <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">Just act casual.. nothing to see here.</option>
+                                    <option value="2">Look at my eyes… I'm innocent.</option>
+                                    <option value="3">Guilty… but it's ok because I’m kind of a big deal.</option>
                                 </select>
                             </div>
                         </div>
@@ -198,15 +198,15 @@
                 <!-- Question: 8 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">expand_more</i>Question 8: 
+                            <i class = "material-icons">expand_more</i>How often do you like being outside?
                         </div>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
-                                <select id="q_8">
+                                <select class="question" id="q_8">
                                     <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">Always.</option>
+                                    <option value="2">Sometimes... as long as it’s not snowing or raining.</option>
+                                    <option value="3">As little as possible.</option>
                                 </select>
                             </div>
                         </div>
@@ -214,15 +214,15 @@
                 <!-- Question: 9 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">expand_more</i>Question 9: 
+                            <i class = "material-icons">expand_more</i>How would you react to seeing a squirrel?
                         </div>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
-                                <select id="q_9">
+                                <select class="question" id="q_9">
                                     <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">Tree it.</option>
+                                    <option value="2">Play with it.</option>
+                                    <option value="3">I don’t care.. I can’t be bothered by squirrels.</option>
                                 </select>
                             </div>
                         </div>
@@ -230,62 +230,69 @@
                 <!-- Question: 10 -->
                     <li>
                         <div class = "collapsible-header">
-                            <i class = "material-icons">expand_more</i>Question 10: 
+                            <i class = "material-icons">expand_more</i>What's your background?
                         </div>
                         <div class = "collapsible-body">
                             <div class="input-field col s12">
-                                <select id="q_10">
+                                <select class="question" id="q_10">
                                     <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">Rescued.</option>
+                                    <option value="2">Royalty(purebred).</option>
+                                    <option value="3">Arranged.</option>
                                 </select>
                             </div>
                         </div>
                     </li>
-                </ul>
-                <a id="find_my_match" href="#modal1" style="width: 94%; display: block; margin: 0 auto; margin-top: 4vh;  margin-bottom: 4vh" class="waves-effect waves-light btn modal-trigger ">Find My Match</a>
+                </ul>   <!-- End of questions --> 
+            <!-- Submit answers --> 
+                <a id="find_my_match" href="#modal1" style="width: 94%; display: block; margin: 0 auto; margin-top: 4vh;  margin-bottom: 4vh" class="waves-effect waves-light btn modal-trigger ">Fetch My Match</a>
             </section>
         
              <!-- Modal Structure -->
             <div id="modal1" class="modal">
-                <div class="modal-content">
-                <h4>You Matched With: </h4>
-                <hr>
-                <!-- <p></p> -->
-                <!-- <div class="progress" style="margin-top: 6vh">
-                    <div class="indeterminate"></div>
-                </div> -->
-                <div class="row center-align valign-wrapper" style="padding-top: 40px!important">
+                <div class="modal-content center-align">
+                    <h4 class="fetching">Fetching... </h4>
+                    <h4 class="match_details">You matched with: </h4>
+                    <hr>
+                <!-- Progress Bar -->
+                    <div class="progress fetching" style="margin-top: 6vh">
+                        <div class="indeterminate"></div>
+                    </div>
+                <!-- Match photos -->
+                    <div class="match_details row center-align valign-wrapper" style="padding-top: 40px!important">
+                        <!-- Match 1 -->
                         <div class="col s5">
-                          <img src="http://via.placeholder.com/200x200" alt="" class="z-depth-3 left-align responsive-img"> 
+                            <img src="http://via.placeholder.com/200x200" alt="" class="z-depth-3 left-align responsive-img"> 
                         </div>
+                        <!-- Icon -->
                         <div class="col s2">
-                          <span class="black-text">
-                            <i class="material-icons center-align" style="font-size: 6em!important; color: #26a69a">done</i>
-                          </span>
+                            <span class="black-text">
+                                <i class="material-icons center-align" style="font-size: 6em!important; color: #26a69a">done</i>
+                            </span>
                         </div>
+                        <!-- Match 2 -->
                         <div class="col s5">
-                                <img src="http://via.placeholder.com/200x200" alt="" class="z-depth-3 right-align responsive-img"> 
+                            <img src="http://via.placeholder.com/200x200" alt="" class="z-depth-3 right-align responsive-img"> 
                         </div>
+                    </div>
                 </div>
 
-                </div>
+                <!-- Modal-footer -->
                 <div class="modal-footer">
                     <div class="modal-content" style="border-top: 1px solid #26a69a; margin-left: 20px; margin-right: 20px">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                </div>
+                    <a href="/home" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                    </div>
                 </div>
             </div>
-      
         </main>
 
+        <!-- footer -->
         <footer class="page-footer">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
-                        <h5 class="white-text">Friend Finder</h5>
-                      <p class="grey-text text-lighten-4">Connect with friends around the world</p>
+                        <h5 class="white-text">FETCH A FRIEND</h5>
+                      <p class="grey-text text-lighten-4">Join the pack to enjoy some bone-afide fun!</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
                       <h5 class="white-text">Links</h5>

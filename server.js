@@ -22,7 +22,7 @@ app.use(express.static('app/public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Import routes and provides the server with access
+// Provides the routes with access to the express app 
 require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
 
