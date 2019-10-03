@@ -42,7 +42,7 @@ $('document').ready(() => {
           scores: []
       }
   
-    $('.question').each(() => {
+    $('.question').each(function () {
       // Parse the input values as integers
       scoresArray.push(parseInt( $(this).val())); 
     })
