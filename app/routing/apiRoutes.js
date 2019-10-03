@@ -46,22 +46,11 @@ module.exports = (app) => {
                 minDifference = totalDifference
                 bestMatch = friends[i].first_name; 
             }
-            // Pushes the difference between each member and pushes the results to the compare scores array 
-            // compareScores.push(totalDifference);
-            //  compareScores[i] = totalDifference;
+          
            
         }
-        // var match = compareScores[0];
-
-        // for (var i = 1; i < compareScores.length; i++){
-           
-        //     if(compareScores[i] <= match){
-        //         match = compareScores[i]
-        //         bestMatch = i;
-        //         console.log("This is the best match: " + bestMatch)
-        //     }
-        // }
-        console.log("Total Differences: " + bestMatch)
+    
+        console.log("Your best match is: " + bestMatch)
         friends.push(newPawfile)
         res.json(newPawfile[bestMatch]);
     
