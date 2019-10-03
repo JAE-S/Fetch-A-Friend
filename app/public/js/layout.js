@@ -1,4 +1,7 @@
 
+  // ========================================================== //
+ //               Front-End Javascript functions               //
+// ========================================================== //
 
 $('document').ready(() => {
     // Hidden elements on load
@@ -38,19 +41,21 @@ $('document').ready(() => {
           photo: $('#photo').val(),
           scores: []
       }
-    
-    $('.question').each(function(){
-      // Parse input values as integer
+  
+    $('.question').each(() => {
+      // Parse the input values as integers
       scoresArray.push(parseInt( $(this).val())); 
     })
-    // This counters the async behavior of $.each()
+    // Counters the async behavior of the .each function 
     .promise().done(() => {
-      // Push the array of scores to the new friend object
+
+      // Pushes the scores to the newPawfile object 
       newPawfile.scores = scoresArray;
 
+      // AJAX Post 
       $.post("/api/friends", newPawfile).then((data) => {
         console.log("Pawfile created successfully!", data);
-      }); // end AJAX POST
+      }); 
     })
   }
 }) 
