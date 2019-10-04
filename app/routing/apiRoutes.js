@@ -52,19 +52,22 @@ function getMatch(userResponse){
     }
 
     // Loops through current pawfiles
-    for (var i = 0; i < friends.length; i++){
+    for (var i = 0; i < (friends.length - 1); i++){
         var totalDifference = 0;
         // Loops through currentScore array
         for (var x = 0; x < friends[i].scores.length; x++){
             // Math.abs calculates the results as positive numbers 
             totalDifference += Math.abs(userResponse.scores[x] - friends[i].scores[x]);
         }
-        
+        // If the Best match index is null and this is the first friend checked ( Default match = first friend checked )
         if (bestMatch.index === null){
+            // Updates the best match index
             bestMatch.index = i; 
+            //Updates the total difference 
             bestMatch.totalDifference = totalDifference; 
-            console.log("you are a match: " + bestMatch.totalDifference)
+            // console.log("bestMatch.totalDifference === :  " + bestMatch.totalDifference)
         }
+        // Updates the Best Match index if the value is greater than -1 and the total difference of each iteration is less than the bestMatch.totalDifference 
         if (bestMatch.index > -1 && totalDifference < bestMatch.totalDifference) {
             bestMatch.index = i;
             bestMatch.totalDifference = totalDifference;

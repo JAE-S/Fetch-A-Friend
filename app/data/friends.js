@@ -8,7 +8,7 @@ var friends = [
     {
         "first_name":"Miss Furbulous",
         "last_name":"Lee",
-        "photo": "miss_furbulous.jpg", 
+        "photo": './src/assets/images', 
         "scores":[3,1,3,1,1,1,3,3,3,2]
       },
       {

@@ -30,8 +30,6 @@ $('document').ready(function() {
 
       $(".match_details").delay(2000).fadeIn(500);
 
-        // addPawfile();
-
         var newPawfile = {
           first_name: $('#first_name').val(),
           last_name: $('#last_name').val(),
@@ -54,63 +52,18 @@ $('document').ready(function() {
         console.log(data.first_name)
         $('#newMatch').html(data.first_name);
 
-        // if (data.first_name === "Countess Droolsbury"){
-        //   $('<img />').attr({
-        //     'id': 'myImage'+img_index,
-        //     'src': 'http://doc.jsfiddle.net/_downloads/jsfiddle-logo.png',
-        //     'alt': 'Countess Droolsbury',
-        //     'title': 'Countess Droolsbury',
-        // }).html('#container');
-        // }
+        if (data.first_name === "Countess Droolsbury"){
+          $('<img />').attr({
+            'src': 'assets/images',
+            'alt': 'Countess Droolsbury',
+            'title': 'Countess Droolsbury',
+        }).html('#newMatchImg');
+        }
 
         console.log(data.user_name)
         $('#userName').html(data.user_name);
       })
 
       })
-
-    // function addPawfile(){
-      
-      // var scoresArray = [];
-  
-
-      // var newPawfile = {
-      //     first_name: $('#first_name').val(),
-      //     last_name: $('#last_name').val(),
-      //     photo: $('#photo').val(),
-      //     scores:  [
-      //         $('#q_1').val(),
-      //         $('#q_2').val(),
-      //         $('#q_3').val(),
-      //         $('#q_4').val(),
-      //         $('#q_5').val(),
-      //         $('#q_6').val(),
-      //         $('#q_7').val(),
-      //         $('#q_8').val(),
-      //         $('#q_9').val(),
-      //         $('#q_10').val(),
-      //       ]
-      // };
-  
-    // $('.question').each(function () {
-    //   // Parse the input values as integers
-    //   scoresArray.push(parseInt( $(this).val())); 
-    // })
-    // // Counters the async behavior of the .each function 
-    // .promise().done(() => {
-
-    //   // Pushes the scores to the newPawfile object 
-    //   newPawfile.scores = scoresArray;
-
-      // AJAX Post 
-      // $.post("/api/friends", newPawfile, function(data){
-      //   console.log(data.first_name)
-      //   console.log(data.user_name)
-      // })
-        // console.log("Pawfile created successfully!", data);
-      
-    // })
-  // }
-
 }) 
 
