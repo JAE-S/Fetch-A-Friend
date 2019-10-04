@@ -7,11 +7,6 @@
 // =========================================================
 var friends = require("../data/friends.js");
 
-var totalDifference = 0;
-// Best match 
-var bestMatchID = 0; 
-var bestScore = 30; 
-
 
 // Routes
 // =========================================================
@@ -27,38 +22,55 @@ module.exports = (app) => {
     app.post("/api/friends", (req, res) => {
        var newPawfile = req.body; 
         console.log(newPawfile);
-
-        matches(req.body) 
-
         friends.push(newPawfile)
-        // console.log(friends[bestMatchID].first_name)
 
+        var bestMatch = getMatch(req.body) 
+        // console.log("Index: " + bestMatch.index)
+        // console.log("Total Difference: " + bestMatch.totalDifference)
         res.send({
-            first_name: friends[bestMatchID].first_name,
-            photo: friends[bestMatchID].photo, 
+            first_name: friends[bestMatch.index].first_name,
+            photo: friends[bestMatch.index].photo, 
 
             user_name: req.body.first_name,
             user_pic: req.body.photo,
         })
-
-    
     })
     // console.log(friends.length)
 
 }
-function matches(addMatch){
+
+
+  // ========================================================== //
+ //                  Get The Best Match Function               //
+// ========================================================== //
+
+
+function getMatch(userResponse){
+    var bestMatch = {
+        index: null, 
+        totalDifference: null 
+    }
+
     // Loops through current pawfiles
     for (var i = 0; i < friends.length; i++){
-        totalDifference = 0;
+        var totalDifference = 0;
         // Loops through currentScore array
         for (var x = 0; x < friends[i].scores.length; x++){
             // Math.abs calculates the results as positive numbers 
-            totalDifference += Math.abs(addMatch.scores[x] - friends[i].scores[x]);
+            totalDifference += Math.abs(userResponse.scores[x] - friends[i].scores[x]);
         }
-        if (x === 10 && totalDifference < bestScore){
-            bestScore = totalDifference; 
-            bestMatchID = i; 
-            // console.log("you are a match" + bestMatchID)
+        
+        if (bestMatch.index === null){
+            bestMatch.index = i; 
+            bestMatch.totalDifference = totalDifference; 
+            console.log("you are a match: " + bestMatch.totalDifference)
         }
+        if (bestMatch.index > -1 && totalDifference < bestMatch.totalDifference) {
+            bestMatch.index = i;
+            bestMatch.totalDifference = totalDifference;
+        }
+
     }
+    console.log("best match: " + bestMatch )
+    return bestMatch
 } 

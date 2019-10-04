@@ -8,7 +8,7 @@ var friends = [
     {
         "first_name":"Miss Furbulous",
         "last_name":"Lee",
-        "photo":"miss_furbulous.jpg",
+        "photo": "miss_furbulous.jpg", 
         "scores":[3,1,3,1,1,1,3,3,3,2]
       },
       {
@@ -35,4 +35,3 @@ var friends = [
 // Exports the friends object
 module.exports = friends; 
 // console.log(friends);
-

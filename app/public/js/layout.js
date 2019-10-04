@@ -53,6 +53,16 @@ $('document').ready(function() {
       $.post("/api/friends", newPawfile, function(data){
         console.log(data.first_name)
         $('#newMatch').html(data.first_name);
+
+        // if (data.first_name === "Countess Droolsbury"){
+        //   $('<img />').attr({
+        //     'id': 'myImage'+img_index,
+        //     'src': 'http://doc.jsfiddle.net/_downloads/jsfiddle-logo.png',
+        //     'alt': 'Countess Droolsbury',
+        //     'title': 'Countess Droolsbury',
+        // }).html('#container');
+        // }
+
         console.log(data.user_name)
         $('#userName').html(data.user_name);
       })
