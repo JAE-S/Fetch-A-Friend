@@ -5,6 +5,8 @@
 
 $('document').ready(function() {
     // Hidden elements on load
+   
+
     $(".match_details").hide();
     $("#survey").hide();
     $('#user_details').show();
@@ -47,23 +49,35 @@ $('document').ready(function() {
               $('#q_10').val(),
             ]
       };
+   
 
       $.post("/api/friends", newPawfile, function(data){
         console.log(data.first_name)
-        $('#newMatch').html(data.first_name);
+        var bestMatch = data.first_name
 
-        if (data.first_name === "Countess Droolsbury"){
-          $('<img />').attr({
-            'src': 'assets/images',
-            'alt': 'Countess Droolsbury',
-            'title': 'Countess Droolsbury',
-        }).html('#newMatchImg');
+        $('#newMatch').html(bestMatch);
+
+        if (bestMatch === "Countess Droolsbury"){
+            $('#newMatchImg').attr('src', 'assets/images/countess_drooslbury.jpg');
+        } else if (bestMatch === "Salvador Dogi"){
+          $('#newMatchImg').attr('src', 'assets/images/salvador_dogi.jpg');
+        } else if (bestMatch === "Professor Wagglesworth"){
+          $('#newMatchImg').attr('src', 'assets/images/professor_wagglesworth.jpg');
+        } else if (bestMatch === "Miss Furbulous"){
+          $('#newMatchImg').attr('src', 'assets/images/miss_furbulous.jpg');
         }
 
         console.log(data.user_name)
-        $('#userName').html(data.user_name);
+        var userName = data.user_name.toUpperCase()
+        $('#userName').prepend(userName)
+        $('#userImg').attr(data.user_pic)
       })
 
+
       })
+
+      function bestMatchPhoto(){
+        
+      }
 }) 
 

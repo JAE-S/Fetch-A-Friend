@@ -17,6 +17,12 @@ module.exports = (app) => {
           
       });
 
+      app.get("/countessdroolsbury", (req, res) => {
+
+        res.sendFile(path.join(__dirname, "../public/assets/images/countess_drooslbury.jpg"));
+          
+      });
+
        // 'catch-all' Route to all browser extension except /survey and /api/friends => displays the home page
       app.get("*", (req, res) => {
 
