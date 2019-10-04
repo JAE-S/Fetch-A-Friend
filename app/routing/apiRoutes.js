@@ -28,18 +28,10 @@ module.exports = (app) => {
        var newPawfile = req.body; 
         console.log(newPawfile);
 
-        ///  Handles the compatibility logic.  \\\
-        
-        // Creates a new array with the current score
-        // var currentScore = req.body.scores; 
-        // console.log(currentScore)
-
-    
-      
         matches(req.body) 
 
         friends.push(newPawfile)
-        console.log(friends[bestMatchID].first_name)
+        // console.log(friends[bestMatchID].first_name)
 
         res.send({
             first_name: friends[bestMatchID].first_name,

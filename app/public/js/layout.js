@@ -52,7 +52,9 @@ $('document').ready(function() {
 
       $.post("/api/friends", newPawfile, function(data){
         console.log(data.first_name)
+        $('#newMatch').html(data.first_name);
         console.log(data.user_name)
+        $('#userName').html(data.user_name);
       })
 
       })

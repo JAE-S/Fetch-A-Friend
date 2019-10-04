@@ -263,6 +263,7 @@
                         <!-- Match 1 -->
                         <div class="col s5">
                             <img src="http://via.placeholder.com/200x200" alt="" class="z-depth-3 left-align responsive-img"> 
+                            <h5 id="userName" style="color: #26a69a">user_details</h5>
                         </div>
                         <!-- Icon -->
                         <div class="col s2">
@@ -273,6 +274,7 @@
                         <!-- Match 2 -->
                         <div class="col s5">
                             <img src="http://via.placeholder.com/200x200" alt="" class="z-depth-3 right-align responsive-img"> 
+                            <h5 id="newMatch" style="color: #26a69a">match</h5>
                         </div>
                     </div>
                 </div>
@@ -297,8 +299,8 @@
                     <div class="col l4 offset-l2 s12">
                       <h5 class="white-text">Links</h5>
                       <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">API Friends List</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">GitHub Repo</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://intense-beyond-18003.herokuapp.com/api/friends">API Friends List</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://github.com/JAE-S/Friend-Fiinder">GitHub Repo</a></li>
                       </ul>
                     </div>
                   </div>
@@ -313,42 +315,5 @@
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="assets/materializejs/materialize.min.js"></script>
         <script type="text/javascript" src="js/layout.js"></script>
-<!-- 
-        <script> 
-         $('#find_my_match').on("click", function(event) {
-      event.preventDefault(); 
-      setTimeout(function(){
-        $(".fetching").hide();
-      }, 2000);
-
-      $(".match_details").delay(2000).fadeIn(500);
-
-        // addPawfile();
-
-        var newPawfile = {
-          first_name: $('#first_name').val(),
-          last_name: $('#last_name').val(),
-          photo: $('#photo').val(),
-          scores:  [
-              $('#q_1').val(),
-              $('#q_2').val(),
-              $('#q_3').val(),
-              $('#q_4').val(),
-              $('#q_5').val(),
-              $('#q_6').val(),
-              $('#q_7').val(),
-              $('#q_8').val(),
-              $('#q_9').val(),
-              $('#q_10').val(),
-            ]
-      };
-
-      $.post("/api/friends", newPawfile, function(data){
-        console.log(data.first_name)
-        console.log(data.user_name)
-      })
-
-      })
-        </script> -->
     </body>
 </html>
