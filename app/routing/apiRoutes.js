@@ -7,6 +7,12 @@
 // =========================================================
 var friends = require("../data/friends.js");
 
+var totalDifference = 0;
+// Best match 
+var bestMatchID = 0; 
+var bestScore = 30; 
+
+
 // Routes
 // =========================================================
 module.exports = (app) => {
@@ -25,36 +31,42 @@ module.exports = (app) => {
         ///  Handles the compatibility logic.  \\\
         
         // Creates a new array with the current score
-        var currentScore = req.body.scores; 
-        console.log(currentScore)
+        // var currentScore = req.body.scores; 
+        // console.log(currentScore)
 
-        var compareScores = [];
-        // Best match 
-        var bestMatch; 
-       
-
-        // Loops through current pawfiles
-        for (var i = 0; i < friends.length; i++){
-            var totalDifference = 0;
-            var minDifference = -1;
-            // Loops through currentScore array
-            for (x = 0; x < currentScore.length; x++){
-                // Math.abs calculates the results as positive numbers 
-                totalDifference += Math.abs(currentScore[x] - friends[i].scores[x]);
-            }
-            if (minDifference < 0 || totalDifference < minDifference ){
-                minDifference = totalDifference
-                bestMatch = friends[i].first_name; 
-            }
-          
-           
-        }
     
-        console.log("Your best match is: " + bestMatch)
+      
+        matches(req.body) 
+
         friends.push(newPawfile)
-        res.json(newPawfile[bestMatch]);
+        console.log(friends[bestMatchID].first_name)
+
+        res.send({
+            first_name: friends[bestMatchID].first_name,
+            photo: friends[bestMatchID].photo, 
+
+            user_name: req.body.first_name,
+            user_pic: req.body.photo,
+        })
+
     
     })
     // console.log(friends.length)
 
 }
+function matches(addMatch){
+    // Loops through current pawfiles
+    for (var i = 0; i < friends.length; i++){
+        totalDifference = 0;
+        // Loops through currentScore array
+        for (var x = 0; x < friends[i].scores.length; x++){
+            // Math.abs calculates the results as positive numbers 
+            totalDifference += Math.abs(addMatch.scores[x] - friends[i].scores[x]);
+        }
+        if (x === 10 && totalDifference < bestScore){
+            bestScore = totalDifference; 
+            bestMatchID = i; 
+            // console.log("you are a match" + bestMatchID)
+        }
+    }
+} 
