@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="assets/css/materialize.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
 
-    </head>
+    </head> 
 
     <body> 
         <!-- Header --> 
@@ -35,9 +35,11 @@
         <main class="container">
         <!-- User Details --> 
             <section id="user_details">
-                <h2>Pawfile</h2>
-                <hr> 
-                <h5>To get started please answer a few details below.</h5>
+
+                <div class="row border-line">
+                   <h4 id="create-pawfile"><i class="material-icons pets-icon">pets </i> Create A Pawfile <i class="material-icons pets-icon"> pets</i></h4>
+                </div>
+                <h5 style="padding-bottom: 6vh">To get started please answer a few details below.</h5>
             
             <!-- Input form --> 
                 <form method="POST" role="form" class="col s12">
@@ -74,12 +76,12 @@
                 </form>
 
             <!-- Submit button --> 
-                <button id="start" class="center-align btn" style="width: 60%; display: block; margin: 0 auto">Get Sniffing</button>
+              <button id="start" class="center-align btn">Get Sniffing</button>
             </section>
             <!-- Survey --> 
             <section id="survey">
-                <a><img class="responsive-img" style="max-width: 400px; width: 100%; height: auto; margin: 0 auto; display: block; margin-top: 20px" src="assets/images/main_images/dog_main.jpg" alt="Boxer dog fetching a new furry companion!"></a>
-                <h5 class="center-align" style="padding-bottom: 20px">Please answer the questions below to find your match!</h5>
+                <a><img class="responsive-img" id="survey-header-img" src="assets/images/main_images/dog_main.jpg" alt="Boxer dog fetching a new furry companion!"></a>
+                <h5 class="center-align" id="survey-header">Please answer the questions below to find your match!</h5>
             <!-- Questions --> 
                 <ul class = "collapsible popout" data-collapsible = "accordion">
 
@@ -251,45 +253,29 @@
              <!-- Modal Structure -->
             <div id="modal1" class="modal">
                 <div class="modal-content center-align">
-                    <h4 class="fetching" style="border-bottom: 1px solid #26a69a; padding-bottom:20px">Fetching... </h4>
+                    <h4 id="fetching-data" class="fetching">Fetching... </h4>
 
-                    <h4 id="userName" class="match_details" style="border-bottom: 1px solid #26a69a; padding-bottom:20px; color: #26a69a">  OUR SNIFF TEST SUGGESTS: </h4>
-                    <!-- <h4 class="match_details">You matched with: </h4> -->
-                    <!-- <hr> -->
+                    <h4 id="userName" class="match_details">  OUR SNIFF TEST SUGGESTS: </h4>
                 <!-- Progress Bar -->
                     <div class="progress fetching" style="margin-top: 6vh">
                         <div class="indeterminate"></div>
                     </div>
                 <!-- Match photos -->
                     <div class="match_details center-align">
-                        <!-- Match 1 -->
-                        <!-- <div class="col s5">
-                            <img id="userImg" class="z-depth-3 left-align responsive-img"> 
-                            <h5 id="userName" style="color: #26a69a">user_details</h5>
-                        </div> -->
-                        <!-- Icon -->
-                        <!-- <div class="col s2">
-                            <span class="black-text">
-                                <i class="material-icons center-align" style="font-size: 6em!important; color: #26a69a">done</i>
-                            </span>
-                        </div> -->
-                        <!-- Match 2 -->
-                        <!-- <div class="col s5"> -->
-                            <div class="row center-align valign-wrapper" style="padding-top: 40px!important; padding-bottom: 0!important">
-                                <img id="newMatchImg" class="z-depth-3 right-align responsive-img"style="max-width: 300px; width: 100%; height: auto; margin: 0 auto"> 
-                            </div>
-                            <div class="row center-align valign-wrapper" style="max-width: 300px; width: 100%; height: auto; display: block; margin: 0 auto">
-                                <h5 id="newMatch" style="color: #26a69a; padding-top: 40px!important">match</h5>
-                            </div>
-                       </div>
-                    </div>
-                        <!-- </div> -->
-                    <!-- </div> -->
-                <!-- </div> -->
+                 
+                        <div class="match-container row center-align">
+                            <img id="newMatchImg" class="match-container2 z-depth-3 responsive-img"> 
+                        </div>
 
+                        <div class="row center-align">
+                            <h5 id="newMatch">match</h5>
+                        </div>
+
+                    </div>
+                </div>
                 <!-- Modal-footer -->
                 <div class="modal-footer">
-                    <div class="modal-content" style="border-top: 1px solid #26a69a; margin-left: 20px; margin-right: 20px">
+                    <div class="modal-content">
                     <a href="/home" class="modal-close waves-effect waves-green btn-flat">Close</a>
                     </div>
                 </div>

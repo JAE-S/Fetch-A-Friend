@@ -12,7 +12,7 @@ var friends = require("../data/friends.js");
 // =========================================================
 module.exports = (app) => {
 
-    // A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
+    // Displays a JSON of all possible friends
     app.get("/api/friends", (req, res) => {
   
       res.json(friends); 
@@ -25,8 +25,7 @@ module.exports = (app) => {
         friends.push(newPawfile)
 
         var bestMatch = getMatch(req.body) 
-        // console.log("Index: " + bestMatch.index)
-        // console.log("Total Difference: " + bestMatch.totalDifference)
+
         res.send({
             first_name: friends[bestMatch.index].first_name,
             photo: friends[bestMatch.index].photo, 
@@ -35,10 +34,7 @@ module.exports = (app) => {
             user_pic: req.body.photo,
         })
     })
-    // console.log(friends.length)
-
 }
-
 
   // ========================================================== //
  //                  Get The Best Match Function               //

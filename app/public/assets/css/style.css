@@ -1,31 +1,135 @@
-body {
-   /* height: 52vh!important; */
-   height: 100vh;
-}
-header, footer {
-    background-color: #26a69a!important;
-}
 
-#user_details {
-    max-width: 960px; 
-    width: 100%; 
-    margin: 0 auto; 
-    display: block; 
-    margin-top: 20px; 
-    padding: 10px
-}
+   /* ========================================================== */
+  /*                    S T Y L E S H E E T                     */
+ /* ========================================================== */
 
-body {
-    display: flex;
-    min-height: 100vh;
+ body {
+           display: flex;
     flex-direction: column;
+        min-height: 100vh;
+  }
+  body p, h5, h6 {
+    font-family: museo-sans, sans-serif;
+    font-weight: 300;
+     font-style: normal;
   }
 
   main {
-    flex: 1 0 auto;
+              flex: 1 0 auto;
+  }
+h5, h6 {
+  color: #26a69a; 
+}
+
+header, footer {
+  background-color: #26a69a!important;
+}
+
+#survey-header {
+  padding-top: 2vh; 
+  padding-bottom: 2vh; 
+  border-bottom: 1px solid #26a69a; 
+  border-top: 1px solid #26a69a; 
+  margin-left: 20px; 
+  margin-right: 20px; 
+  margin-bottom: 4vh; 
+
+}
+
+.navbar-brand, .white-text, .display-4 {
+     font-family: museo-sans, sans-serif;
+     /* font-size: 1em;  */
+     font-weight: 700;
+      font-style: italic;
+}
+
+.border-line {
+  border-bottom: 1px solid #26a69a!important;
+  padding-bottom: 20px!important; 
+}
+
+.pets-icon {
+  font-size: 1em; 
+}
+
+#create-pawfile, h4 {
+  font-family: museo-sans, sans-serif;
+  font-weight: 700;
+   font-style: normal;
+}
+
+#user_details {
+           display: block; 
+            margin: 0 auto;
+        margin-top: 20px; 
+         max-width: 960px;
+             width: 100%; 
+           padding: 10px
+}
+
+.collapsible-header {
+       line-height: 3;
   }
 
-  .collapsible-header {
-      line-height: 3;
-  }
+/* BUTTONS */
+#start {
+  width: 60%; 
+  display: block; 
+  margin: 0 auto;
+  margin-top: 6vh; 
+}
+
+#get-started {
+  margin-top: 4vh; 
+  margin-bottom: 4vh; 
+}
+
+#survey-header-img {
+  max-width: 400px; 
+  width: 100%; 
+  height: auto; 
+  margin: 0 auto; 
+  display: block; 
+  margin-top: 20px;
+}
+
+#userName {
+  border-bottom: 1px solid #26a69a; 
+  padding-bottom:20px; 
+  color: #26a69a;
+}
+
+#fetching-data {
+  border-bottom: 1px solid #26a69a; 
+  padding-bottom:20px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.match-container {
+  padding-top: 40px!important; 
+  padding-bottom: 0!important;
+}
+
+.match-container2 {
+  display: block;
+  max-width: 300px!important; 
+  width: 100%; 
+  height: auto; 
+  margin: 0 auto;
+}
+
+#newMatch {
+  color: #26a69a; 
+  padding-top: 40px!important;
+  display: block!important; 
+
+  margin: 0 auto!important; 
+}
+
+.modal-content {
+  border-top: 1px solid #26a69a; 
+  margin-left: 20px; 
+  margin-right: 20px;
+}
 
