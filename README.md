@@ -10,7 +10,7 @@
 
 ![App Mock Up](readme_assets/mock-up-2.svg)
 
-> [Visit Us At](https://intense-beyond-18003.herokuapp.com/)
+> [Click here to visit the site!](https://intense-beyond-18003.herokuapp.com/)
 
 *File Architecture*
 ```
