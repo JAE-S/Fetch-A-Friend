@@ -6,7 +6,7 @@
 $('document').ready(function() {
     // Hidden elements on load
    
-
+    $('#completeFields').hide(); 
     $(".match_details").hide();
     $("#survey").hide();
     // $('#find_my_match').hide();
@@ -20,11 +20,23 @@ $('document').ready(function() {
 
     // On Click functions 
     $('#start').on("click", function(event){
-        event.preventDefault(); 
+      event.preventDefault();
+        validateInput() 
+    });
+    
+    function validateInput() {
+    
+      if ($('#first_name').val() && $('.pawfilePhoto') && $('#last_name')){
         $('#user_details').hide();
         $("#survey").show();
-    });
-
+      } else {
+        $('#completeFields').show(); 
+        setTimeout(function(){
+        $('#completeFields').fadeOut('slow'); 
+      }, 2000);
+      }
+      
+    }
     $('#find_my_match').on("click", function(event) {
       event.preventDefault(); 
       setTimeout(function(){

@@ -65,10 +65,10 @@
                         <!-- <label>Profile Photo</label> -->
                         <div class="file-field input-field">
                             <div class="btn"><i class="large material-icons">add_a_photo</i> 
-                                <input id="photo" type="file" />
+                                <input class="pawfilePhoto" id="photo" type="file" />
                             </div>
                             <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text"
+                                <input class="pawfilePhoto file-path validate" type="text"
                                     placeholder="Please upload a profile photo" />
                             </div>
                         </div>
@@ -77,6 +77,9 @@
 
             <!-- Submit button --> 
               <button id="start" class="center-align btn">Get Sniffing</button>
+              <div class="center-align">
+                  <p id="completeFields">Please complete all of the fields to continue! </p>
+            </div>
             </section>
             <!-- Survey --> 
             <section id="survey">
