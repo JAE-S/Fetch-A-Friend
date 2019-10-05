@@ -97,6 +97,8 @@ header, footer {
   border-bottom: 1px solid #26a69a; 
   padding-bottom:20px; 
   color: #26a69a;
+  font-weight: 700;
+  font-style: italic;
 }
 
 #fetching-data {
@@ -104,6 +106,7 @@ header, footer {
   padding-bottom:20px;
   font-weight: 700;
   font-style: italic;
+  color: #26a69a;
 }
 
 .match-container {
@@ -123,7 +126,6 @@ header, footer {
   color: #26a69a; 
   padding-top: 40px!important;
   display: block!important; 
-
   margin: 0 auto!important; 
 }
 
