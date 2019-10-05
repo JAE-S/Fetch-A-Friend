@@ -4,11 +4,11 @@
 ---
 # Welcome to Fetch A Friend 
 
-```
+---
  This is a full-stack web application, deployed through Heroku. Fetch A Friend provides our furry companions with the opportunity to connect with other pups that share similar interest. 
+---
 
-```
-![App Mock Up](readme_assets/mock-up.svg)
+![App Mock Up](readme_assets/mock-up-2.svg)
 
 *File Architecture*
 ```
