@@ -9,6 +9,7 @@ $('document').ready(function() {
 
     $(".match_details").hide();
     $("#survey").hide();
+    // $('#find_my_match').hide();
     $('#user_details').show();
     // Materialize functions 
     $('.carousel').carousel();
@@ -49,7 +50,6 @@ $('document').ready(function() {
               $('#q_10').val(),
             ]
       };
-   
 
       $.post("/api/friends", newPawfile, function(data){
         console.log(data.first_name)
