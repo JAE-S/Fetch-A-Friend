@@ -56,28 +56,16 @@ $('document').ready(function() {
         var bestMatch = data.first_name
 
         $('#newMatch').html(bestMatch);
-
-        if (bestMatch === "Countess Droolsbury"){
-            $('#newMatchImg').attr('src', 'assets/images/countess_drooslbury.jpg');
-        } else if (bestMatch === "Salvador Dogi"){
-          $('#newMatchImg').attr('src', 'assets/images/salvador_dogi.jpg');
-        } else if (bestMatch === "Professor Wagglesworth"){
-          $('#newMatchImg').attr('src', 'assets/images/professor_wagglesworth.jpg');
-        } else if (bestMatch === "Miss Furbulous"){
-          $('#newMatchImg').attr('src', 'assets/images/miss_furbulous.jpg');
-        }
-
+        $('#newMatchImg').attr('src', data.photo)
+ 
         console.log(data.user_name)
         var userName = data.user_name.toUpperCase()
         $('#userName').prepend(userName)
         $('#userImg').attr(data.user_pic)
+       
       })
 
-
       })
 
-      function bestMatchPhoto(){
-        
-      }
 }) 
 
