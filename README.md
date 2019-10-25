@@ -1,5 +1,5 @@
 <img src="readme_assets/cover.svg" align="right"
-     title="Fetch A Friend - Logo " width="50%" height="auto">
+     title="Fetch A Friend - Logo " width="30%" height="auto">
 
 # Welcome to Fetch A Friend 
 
