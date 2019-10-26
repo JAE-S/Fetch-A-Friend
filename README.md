@@ -46,7 +46,7 @@
 <details><summary><b>Click To View</b></summary>
  
          ```
-         <b>fetch-a-friend</b>
+         fetch-a-friend
          ├── app
          │   ├── data
          │   │   └── friends.js
