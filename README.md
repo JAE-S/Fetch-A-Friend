@@ -11,7 +11,7 @@
   * [Technologies](#technologies)
   * [Features And Functionality](#features-and-functionality)
   * [File Architecture](#file-architecture)
-  * [Click here to visit the site!](https://intense-beyond-18003.herokuapp.com/)
+  * [Click here to visit the site!](https://fetch-my-friend.herokuapp.com/)
 ---
 <p align="center">
   <img src="readme_assets/mock-up-2.svg" title="Fetch A Friend - Mobile Mockup">
