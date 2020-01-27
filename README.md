@@ -7,20 +7,15 @@
 ---
 
 ## Table of Contents
-  * [Design Process](#design-process)
   * [Technologies](#technologies)
   * [Features And Functionality](#features-and-functionality)
   * [File Architecture](#file-architecture)
   * [Click here to visit the site!](https://fetch-my-friend.herokuapp.com/)
 ---
 <p align="center">
-  <img src="readme_assets/mock-up-2.svg" title="Fetch A Friend - Mobile Mockup">
+  <img src="readme_assets/mock-up-2.svg" alt="Fetch A Friend - Mobile Mockup" title="Fetch A Friend - Mobile Mockup">
 </p>
 
-## Design Process
-```
-
-```
 ---
 ## Technologies
 > <b>Design Tools:</b>
@@ -36,9 +31,15 @@
 ---
 
 ## Features And Functionality
-```
-
-```
+* Demo Video 
+     <img src="readme_assets/fetch_a_friend.gif" align="center"
+     title="Fetch A Friend Demo" alt="Fetch A Friend Demo">
+     
+* Data stored in JSON Format
+     <p align="center">
+       <img src="readme_assets/Screen Shot 2020-01-26 at 11.56.38 PM.png" alt="Fetch A Friend - JSON Data" title="Fetch A Friend - JSON Data" width="60%">
+     </p>
+     
 ---
 
 ## File Architecture
